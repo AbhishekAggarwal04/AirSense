@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+
+    <com.example.anirudh.airsense.RadarView
+        android:id="@+id/radarView"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Scanning..."
+        android:id="@+id/textView3"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#50ffa9"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/infoText"
+        android:textColor="#ffffff"
+        android:layout_marginTop="61dp"
+        android:gravity="center_horizontal"
+        android:text="Sorry, could not find. Scan the QR code on the computer-"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Start Scan"
+        android:gravity="center"
+        android:id="@+id/scanButton"
+        android:textColor="#fcfcfc"
+        android:textSize="15dp"
+        android:layout_below="@+id/infoText"
+        android:layout_centerHorizontal="true"
+        android:background="#000000" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="26dp" />
+
+
+</RelativeLayout>

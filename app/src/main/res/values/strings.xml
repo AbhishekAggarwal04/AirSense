@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AirSens</string>
+    <string name="alt">Alt</string>
+    <string name="home">HOME</string>
+    <string name="ctrl">CTRL</string>
+    <string name="tab">TAB</string>
+    <string name="shift">SHIFT</string>
+    <string name="end">END</string>
+    <string name="fn">FN</string>
+    <string name="esc">ESC</string>
+    <string name="forwardslash">/</string>
+    <string name="pipe">|</string>
+    <string name="backslash">-</string>
+    <string name="pgdn">PgDn</string>
+    <string name="pgup">PgUp</string>
+</resources>
