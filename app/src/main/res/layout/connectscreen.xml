@@ -14,12 +14,18 @@
         android:background="@drawable/whitewallpaper2"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:text="LEFT CLICK"
+        android:drawableTop="@drawable/mouseleftclick"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:id="@+id/leftButtonClickWest"
         android:background="#CFD8DC"
         android:layout_alignBottom="@+id/scrollButton"
@@ -31,9 +37,12 @@
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:text="RIGHT CLICK"
+        android:drawableTop="@drawable/mouserightclick"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:background="#CFD8DC"
         android:id="@+id/rightButtonClickEast"
-        android:layout_above="@+id/tableLayout"
+        android:layout_alignBottom="@+id/scrollButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/scrollButton"
@@ -76,6 +85,207 @@
         android:layout_alignTop="@+id/keyboardOnOffButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />-->
+
+    <TableLayout
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:background="#ff232323"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:stretchColumns="*"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayoutFunction"
+        android:layout_below="@+id/scrollButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TableRow
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+                <Button
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/keyboard_f1"
+                    android:tag="76"
+                    android:background="@drawable/keyboard"
+                    android:layout_width="0.0dip"
+                    android:layout_height="35.0dip"
+                    android:text="F1"
+                    android:layout_weight="0.33"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/keyboard_f2"
+                    android:tag="76"
+                    android:background="@drawable/keyboard"
+                    android:layout_width="0.0dip"
+                    android:layout_height="35.0dip"
+                    android:text="F2"
+                    android:layout_weight="0.33"
+                    android:hapticFeedbackEnabled="true" />
+
+
+                <Button
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/keyboard_f3"
+                    android:tag="-1"
+                    android:background="@drawable/keyboard"
+                    android:layout_width="0.0dip"
+                    android:layout_height="35.0dip"
+                    android:text="F3"
+                    android:layout_weight="0.33"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/keyboard_f4"
+                    android:tag="73"
+                    android:background="@drawable/keyboard"
+                    android:layout_width="0.0dip"
+                    android:layout_height="35.0dip"
+                    android:text="F4"
+                    android:layout_weight="0.33"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/keyboard_f5"
+                    android:tag="73"
+                    android:background="@drawable/keyboard"
+                    android:layout_width="0.0dip"
+                    android:layout_height="35.0dip"
+                    android:text="F5"
+                    android:layout_weight="0.33"
+                    android:hapticFeedbackEnabled="true" />
+
+                <Button
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/keyboard_f6"
+                    android:tag="73"
+                    android:background="@drawable/keyboard"
+                    android:layout_width="0.0dip"
+                    android:layout_height="35.0dip"
+                    android:text="F6"
+                    android:layout_weight="0.33"
+                    android:hapticFeedbackEnabled="true" />
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_blank"
+                android:tag="73"
+                android:background="@drawable/keyboard"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_f7"
+                android:tag="76"
+                android:background="@drawable/keyboard"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:text="F7"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_f8"
+                android:tag="76"
+                android:background="@drawable/keyboard"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:text="F8"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_f9"
+                android:tag="-1"
+                android:background="@drawable/keyboard"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:text="F9"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_f10"
+                android:tag="73"
+                android:background="@drawable/keyboard"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:text="F10"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_f11"
+                android:tag="73"
+                android:background="@drawable/keyboard"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:text="F11"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_f12"
+                android:tag="73"
+                android:background="@drawable/keyboard"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:text="F12"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_back"
+                android:tag="73"
+                android:background="@drawable/keyboard"
+                android:drawableLeft="@drawable/ic_undo_white_24dp"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:layout_weight="0.33"
+                android:hapticFeedbackEnabled="true" />
+
+
+        </TableRow>
+    </TableLayout>
 
     <TableLayout
         android:gravity="center"
@@ -341,12 +551,18 @@
         android:layout_above="@+id/scrollButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="25dp" />
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <ImageButton
+    <Button
         android:layout_width="50dp"
         android:layout_height="200dp"
         android:id="@+id/scrollButton"
+        android:drawableBottom="@drawable/icarrowdownwardblack"
+        android:drawableTop="@drawable/icarrowupwardblack"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:background="#607D8B"
         android:layout_above="@+id/tableLayout"
         android:layout_centerHorizontal="true" />
