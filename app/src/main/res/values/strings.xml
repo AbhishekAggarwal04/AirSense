@@ -5,7 +5,7 @@
     <string name="ctrl">CTRL</string>
     <string name="tab">TAB</string>
     <string name="shift">SHIFT</string>
-    <string name="end">END</string>
+    <string name="delete">DEL</string>
     <string name="fn">FN</string>
     <string name="esc">ESC</string>
     <string name="forwardslash">/</string>

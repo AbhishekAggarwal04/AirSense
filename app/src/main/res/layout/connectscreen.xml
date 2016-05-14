@@ -2,28 +2,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/whitewallpaper"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/whitewallpaper2"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <Button
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:text="LEFT CLICK"
         android:id="@+id/leftButtonClickWest"
+        android:background="#CFD8DC"
         android:layout_alignBottom="@+id/scrollButton"
-        android:layout_alignRight="@+id/startStopButton"
-        android:layout_alignEnd="@+id/startStopButton" />
+        android:layout_toLeftOf="@+id/scrollButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:text="RIGHT CLICK"
+        android:background="#CFD8DC"
         android:id="@+id/rightButtonClickEast"
-        android:layout_alignBottom="@+id/scrollButton"
-        android:layout_alignRight="@+id/keyboardOnOffButton"
-        android:layout_alignEnd="@+id/keyboardOnOffButton" />
+        android:layout_above="@+id/tableLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/scrollButton"
+        android:layout_toEndOf="@+id/scrollButton" /><!--android:layout_alignRight="@+id/keyboardOnOffButton"
+        android:layout_alignEnd="@+id/keyboardOnOffButton"-->
 
-    <Button
+    <com.wnafee.vector.MorphButton
+        android:id="@+id/startStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:vc_startDrawable="@drawable/ic_pause_to_play"
+        app:vc_endDrawable="@drawable/ic_play_to_pause"
+        android:layout_alignTop="@+id/keyboardOnOffButton"
+        android:layout_toLeftOf="@+id/scrollButton"
+        android:layout_toStartOf="@+id/scrollButton"
+        android:layout_marginRight="54dp"
+        android:layout_marginEnd="54dp" />
+
+    <com.wnafee.vector.MorphButton
+        android:id="@+id/keyboardOnOffButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:vc_startDrawable="@drawable/ickeyboardblack"
+        app:vc_endDrawable="@drawable/ickeyboardhideblack"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/textView"
+        android:layout_toRightOf="@+id/scrollButton"
+        android:layout_toEndOf="@+id/scrollButton"
+        android:layout_marginLeft="54dp"
+        android:layout_marginStart="54dp" />
+
+
+    <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="START/PAUSE"
@@ -32,7 +75,7 @@
         android:theme="@style/StartStopButtonTheme"
         android:layout_alignTop="@+id/keyboardOnOffButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true" />-->
 
     <TableLayout
         android:gravity="center"
@@ -95,7 +138,7 @@
                 <Button
                     android:textSize="12.0sp"
                     android:textColor="@android:color/white"
-                    android:id="@+id/keyboard_backslash"
+                    android:id="@+id/keyboard_hyphen"
                     android:tag="73"
                     android:background="@drawable/keyboard"
                     android:layout_width="0.0dip"
@@ -129,12 +172,12 @@
             <Button
                 android:textSize="12.0sp"
                 android:textColor="@android:color/white"
-                android:id="@+id/keyboard_end"
+                android:id="@+id/keyboard_delete"
                 android:tag="123"
                 android:background="@drawable/keyboard"
                 android:layout_width="0.0dip"
                 android:layout_height="35.0dip"
-                android:text="@string/end"
+                android:text="@string/delete"
                 android:hapticFeedbackEnabled="true" />
 
             <Button
@@ -200,25 +243,27 @@
                 android:text="@string/alt"
                 android:hapticFeedbackEnabled="true"  />
 
-            <Button
-                android:textSize="12.0sp"
-                android:textColor="@android:color/white"
-                android:id="@+id/keyboardArrowLeft"
-                android:tag="21"
-                android:background="@drawable/left"
-                android:layout_width="0.0dip"
-                android:layout_height="35.0dip"
-                android:hapticFeedbackEnabled="true" />
 
             <Button
                 android:textSize="12.0sp"
                 android:textColor="@android:color/white"
-                android:id="@+id/keyboardArrowDown"
-                android:tag="20"
+                android:id="@+id/keyboard_left"
+                android:tag="22"
+                android:background="@drawable/left"
+                android:layout_width="0.0dip"
+                android:layout_height="35.0dip"
+                android:hapticFeedbackEnabled="true"  />
+
+            <Button
+                android:textSize="12.0sp"
+                android:textColor="@android:color/white"
+                android:id="@+id/keyboard_down"
+                android:tag="22"
                 android:background="@drawable/down"
                 android:layout_width="0.0dip"
                 android:layout_height="35.0dip"
                 android:hapticFeedbackEnabled="true"  />
+
 
             <Button
                 android:textSize="12.0sp"
@@ -254,17 +299,20 @@
         </TableRow>
     </TableLayout>
 
-    <Button
+    <!--<Button
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:text="Keyboard On/Off"
+        android:drawableLeft="@drawable/ickeyboardwhite"
         android:id="@+id/keyboardOnOffButton"
         android:textColor="@color/textColorPrimary"
         android:theme="@style/KeyboardButtonTheme"
         android:layout_marginBottom="24dp"
         android:layout_above="@+id/textView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true" />-->
+
+
 
     <!--<com.example.anirudh.airsens.ZanyEditText
         android:layout_width="0dp"
@@ -295,11 +343,11 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="25dp" />
 
-    <Button
+    <ImageButton
         android:layout_width="50dp"
         android:layout_height="200dp"
         android:id="@+id/scrollButton"
-        android:background="#b3dc8d"
+        android:background="#607D8B"
         android:layout_above="@+id/tableLayout"
         android:layout_centerHorizontal="true" />
 

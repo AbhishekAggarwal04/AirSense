@@ -27,6 +27,7 @@ dependencies {
     compile 'com.embarkmobile:zxing-android-legacy:2.0.0@aar'
     compile 'com.embarkmobile:zxing-android-integration:2.0.0@aar'
     compile 'com.google.zxing:core:3.0.1'
+    compile 'com.wnafee:vector-compat:1.0.5'
 
 }
 
